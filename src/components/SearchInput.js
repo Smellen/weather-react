@@ -1,15 +1,8 @@
 export const SearchInput = () => {
     return (
-        <div>
-            <form className='search-form'>
-                <div className='form-control'>
-                    <label>
-                        Search
-                    </label>
-                    <input type='text' placeholder='Search a place' />
-                </div>
-            </form>
-        </div>
+        <form className='form-control'>
+            <input type='text' placeholder='Search a place' />
+        </form>
     )
 }
 
