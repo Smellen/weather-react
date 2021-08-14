@@ -16,12 +16,9 @@ export const SearchInput = (showSearch) => {
 
         const fetchData = async () => {
             try {
-                console.log('fetch data');
                 const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&q=${placeToSearch}`);
                 const data = await response.json()
                 setApiData(data);
-                console.log('apiData: ', apiData);
-                console.log('data: ', data);
                 setShowResult(true);
             } catch (e) {
                 console.error(e.toString);
@@ -29,12 +26,7 @@ export const SearchInput = (showSearch) => {
         };
         fetchData();
 
-        console.log('Searching', placeToSearch);
-
         setPlaceToSearch('');
-        console.log('search toggle: ', showSearch);
-        showSearch = false;
-
     }
 
     return (
